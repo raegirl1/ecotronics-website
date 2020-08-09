@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+/* Fixed sidenav, full height */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: #C6DEBA;
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+/* h1 */
+.h1 {
+    align-content: center;
+    verticle-alignment: top;
+}
+/* h4 */
+.h4 {
+align-content: center;
+vertical-align: top;
+}
+
+/*img*/
+.img {
+    align-content: center;
+    verticle-alignment: bottom;
+    padding-top: 25px; 
+
+}
+
+/* pp code */
+.p {
+    align-content: center;
+    verticle-align: top;
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+<div class="main">
+    <div class="sidenav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#map">E-Cycle Map</a>
+        <a href="#basicsofit">Basics of IT</a>
+        <a href="#faq">FAQ</a>
+        <a href="#diy">DIY Projects</a>
+        <a href="#addproject">Add Project</a>
+        <a href="#searchproject">Search Project</a>
+        <a href="#contact">Contact</a>
+        <button class="dropdown-btn">Dropdown
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">E-Cycle Map</a>
+          <a href="#">Basics of IT</a>
+          <a href="faqpage.html">FAQ</a>
+          <a href="#">DIY Projects</a>
+          <a href="#">Add Project</a>
+          <a href="#">Search Project</a>
+          <a href="#">Contact</a>
+        </div>
+</div>
+<script>
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+</script>
+<div class="main">
+    <h1>Frequently Asked Questions</h1>
+
+    <img src=undraw_Friends_online_re_r7pq.svg" alt="questioning">
+
+
+<div class="py-4">
+    <h4 class="typography-h4">Q: What's up with Tiktok? Facebook? Am I being tracked?</h4>
+    <p class="typography-body">A: It’s really important to keep your data safe. We will teach you methods to maximize your opportunity
+        to stay safe on the net.
+       While you can’t stay 100% private on social media, 
+       taking initiative is the first step.
+       2012/2014 - Instagram & WhatsApp acquired by Facebook
+       2018 - Mark Zuckerberg, FB CEO, went on trial for privacy
+       issues and was involved in sketchy research
+       studies with Cambridge Analytica.
+       2020 - Tik Tok comes under fire for being owned by
+       a Chinese Corporation, bytedance. Businesses are required,
+       by law, to report ALL data to the CCP.
+       So, yes, you most certainly being tracked (US, China, Russia, or otherwise.)</p>
+</div>    
+<div class="py-4">
+    <h4 class="typography-h4">Q: Net Neutrality - What is it?</h4>
+    <p class="typography-body">A: It is a concept that ideas should be free and open on the net 
+        for collaboration. Knowledge is power, and we can’t do any of
+        this alone. Initiatives such as SOPA and PIPA have come under fire
+        for protecting corporations and big government in the United States.
+        Examples of gatekeeping against net neutrality include GALE and JSTOR,
+        two research journal libraries only available on University campuses.</p>
+</div> 
+<div class="py-4">
+    <h4 class="typography-h4">Q: Why should I care about this and basic IT Knowledge?</h4>
+    <p class="typography-body">A: We are coming to a point where pen-and-paper is going to 
+        be yesterday’s data manager and main source of info.
+        As a result, we are coming to a point where Tech illiteracy
+        and tech scarcity are going to be very big issues. 
+        So, take advantage of these sweet resources as
+        much as you can!</p>
+</div> 
+<div class="py-4">
+    <h4 class="typography-h4">Q: Is the internet forever?</h4>
+    <p class="typography-body">A: Technically, yes. With SEO's, web crawlers, hackers galore...
+        Your information is basically stored for all to see. You might not become the next internet meme,
+        but rest assured that those embarrassing photos you put at 14 years old and those cringy vids you put are 
+        still indexed deep inside websites and archives.</p>
+</div>
+</div>
+
+
+
+</body>
+</html> 
