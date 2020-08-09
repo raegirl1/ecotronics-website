@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <!DOCTYPE html>
-<html>
-<head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <Title>Contact Us</Title>
 <style>
 body {
   font-family: "Lato", sans-serif;
@@ -50,30 +50,15 @@ body {
 .main {
   margin-left: 200px; /* Same as the width of the sidenav */
   font-size: 20px; /* Increased text to enable scrolling */
-  padding: 0px 10px;
-}
-
-/* Add an active class to the active dropdown button */
-.active {
-  background-color: #C6DEBA;
-  color: white;
-}
-
-/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
-.dropdown-container {
-  display: none;
-  background-color: #262626;
-  padding-left: 8px;
+  padding: 10px;
 }
 
 /* Optional: Style the caret down icon */
-.fa-caret-down {
+/* .fa-caret-down {
   float: right;
   padding-right: 8px;
-}
-    <title>IT Basics</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
+} */
+
         body {
             font-family: "Lato", sans-serif;
             color: black;
@@ -92,13 +77,11 @@ body {
         p {
             text-align: center;
             vertical-align: middle;
-            align: middle;
             font-size: 20px;
             width: 100%;
         }
         img {
             min-inline-size: 20px;
-            align: center;
             vertical-align: middle;
             padding: 50px 50px 45px 25px;
         }
@@ -121,16 +104,11 @@ body {
             color: black;
             font-size: 48px;
             text-align: left;
-            align: left;
-            vertical-align: left;
         }
         li {
             color: black;
-            font-size: 48px;
             text-align: left;
-            text-size: 25px;
-            align: left;
-            vertical-align: left;
+            font-size: 25px;
         }
 
         .vertical-menu {
@@ -163,19 +141,20 @@ body {
         <div class="sidenav">
             <a href="landing.html">Home</a>
             <a href="about.html">About</a>
-            <a href="mapapage.html">E-Cycle Map</a>
+            <a href="map.html">E-Cycle Map</a>
+            <a href="mapspage.html">Places To Donate</a>
             <a href="ithelp.html">Basics of IT</a>
             <a href="faqpage.html">FAQ</a>
             <a href="ideas.html">DIY Projects</a>
             <a href="addproject.html">Add Project</a>
-            <a href="findprojects.html">Search Project</a>
+            <a href="findprojects.html">Project Search</a>
             <a href="contact.html">Contact</a>
     </div>
     <script>
     /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
     var dropdown = document.getElementsByClassName("dropdown-btn");
     var i;
-    
+
     for (i = 0; i < dropdown.length; i++) {
       dropdown[i].addEventListener("click", function() {
       this.classList.toggle("active");
@@ -196,29 +175,37 @@ body {
 </div>
 <div class="content">
     <div class="vertical-menu">
-        <a href="#SOPHIA">Sophia</a>
+        <a href="#soph">Sophia</a>
         <a href="#cat">Catherine</a>
-        <a href="#JESSICA">Jessica</a>
+        <a href="#jess">Jessica</a>
 
     </div>
 
-    <img src="undraw_profile_6l1l.svg">
+    <img src="undraw_profile_6l1l.svg" alt="contacts">
 
-    <SOPHIA id="SOPHIA"></SOPHIA>
+    <SOPHIA id="soph"></SOPHIA>
     <h3>Sophia Elize Cruz</h3>
-    <li>GitHub: sophiaelizecruz</li>
-    <li>Instagram: @asophtato</li>
-    <li>Job: Full-time CS Student</li><br/>
+    <ul>
+        <li>GitHub: sophiaelizecruz</li>
+        <li>Instagram: @asophtato</li>
+        <li>Job: Full-time CS Student</li><br/>
+    </ul>
 
 
 <CATHERINE id="cat"></CATHERINE>
 <h3>Catherine De Mesa</h3>
-    <li>GitHub: raegirl1</li>
-    <li>Instagram: @CatieSai</li>
-    <li>Job: Full-time CS Student</li><br/>
+    <ul>
+        <li>GitHub: raegirl1</li>
+        <li>Instagram: @CatieSai</li>
+        <li>Job: Full-time CS Student</li><br/>
+    </ul>
 <JESSICA id="jess"></JESSICA>
 <h3>Jessica Feng</h3>
-    <li>GitHub: jessfeng</li>
-    <li>Job: Full-time CS Student</li><br/>
+    <ul>
+        <li>GitHub: jessfeng</li>
+        <li>Job: Full-time CS Student</li><br/>
+    </ul>
+</div>
+    </div>
 </body>
 </html>
