@@ -17,20 +17,41 @@
             width: 100%;
             height: 400px;
             margin-top: 100px;
-            margin-left: 0;
+            margin-bottom: 50px;
             text-align: center;
             background-image: url("land.jpg");
         }
 
+        .ewaste {
+            width: 100%;
+            height: 200px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            text-align: center;
+            border-radius: 50px;
+            background-color: #73A64B !important;
+        }
+
         .general {
-            width: 30.3%;
-            height: 600px;
-            margin: 20px;
+            position: center;
+            width: 31%;
+            height: 300px;
+            margin: 15px;
             float: left;
             color: white;
             text-align: center;
             border-radius: 50px;
             background-color: #73A64B !important;
+        }
+
+        h1 {
+            margin-top: 10px;
+            color: white;
+        }
+
+        h4 {
+            margin: 10px;
+            color: white;
         }
 
         @media screen and (max-width: 600px) {
@@ -39,18 +60,61 @@
             }
         }
 
+        .buttons {
+            background-color: white;
+            color: #73A64B !important;
+            border-radius: 8px;
+            margin-top: 20%;
+            margin-bottom: 20%;
+            width: 200px;
+            height: 20%;
+            border: none;
+        }
+
+        .waste-button {
+            background-color: white;
+            color: #73A64B !important;
+            border-radius: 8px;
+            margin-top: 3%;
+            width: 200px;
+            height: 20%;
+            border: none;
+        }
+
     </style>
 </head>
 <body>
 <div id="header" class="header-banner">
 
 </div>
+<div class="ewaste">
+    <h1>The Reality of E-Waste</h1>
+    <h4>E-waste is, and continues to be a problem in our world today as continued mishandling poses a threat to our environment.
+        Learn more from the United States Environmental Protection Agency's article on E-Waste.
+    </h4>
+    <button class="waste-button" onclick="window.location.href='https://www.epa.gov/international-cooperation/cleaning-electronic-waste-e-waste';">
+        LEARN MORE
+    </button>
+</div>
 <div class="general">
-    <h4>Frequently Asked Questions</h4></div>
+    <h2>About Us</h2>
+<h4>Who and what is Ecotronics? Why e-waste? Learn a little bit about the creators, the project, and what we stand for.</h4>
+    <button class="buttons" onclick="window.location.href='';">
+        LET'S GO!
+    </button>
+</div>
 <div class="general">
-    <h4>Where To Donate</h4></div>
+    <h2>Where To Donate</h2>
+    <h4>Got some old electronics lying around your house that you want to throw away? Consider donating it! Find a drop-off place near you!</h4>
+    <button class="buttons" onclick="window.location.href='';">
+        FIND A LOCATION!
+    </button></div>
 <div class="general">
-    <h4>Recycling Ideas</h4></div>
-
+    <h2>Recycling Ideas</h2>
+    <h4>Whether it’s for school, work, or just for fun, we have your back. Here are some creative ways to handle your e-waste!</h4>
+    <button class="buttons" onclick="window.location.href='';">
+        GIVE ME IDEAS!
+    </button>
+    </div>
 </body>
 </html>
