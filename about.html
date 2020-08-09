@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home - Ecotronics</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>About Us</title>
     <style>
         body {
             font-family: "Lato", sans-serif;
@@ -14,72 +16,73 @@
             padding: 5px;
         }
 
+
+        /* Fixed sidenav, full height */
+        .sidenav {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+        /* Style the sidenav links and the dropdown button */
+        .sidenav a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #818181;
+            display: block;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+        }
+
+        /* On mouse-over */
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        /* Main content */
+        .main {
+            margin-left: 200px; /* Same as the width of the sidenav */
+            font-size: 20px; /* Increased text to enable scrolling */
+            padding: 10px;
+        }
+
         .header-banner {
             width: 100%;
-            height: 400px;
-            margin-top: 10px;
-            margin-bottom: 50px;
-            text-align: center;
-            background-image: url("land.jpg");
-        }
-
-        .ewaste {
-            width: 100%;
-            height: 200px;
-            margin-top: 50px;
-            margin-bottom: 50px;
-            text-align: center;
-            border-radius: 50px;
-            background-color: #73A64B !important;
-        }
-
-        .general {
-            position: center;
-            width: 30.5%;
             height: 300px;
-            margin: 15px;
-            float: left;
-            color: white;
-            text-align: center;
-            border-radius: 50px;
+            padding: 10px;
             background-color: #73A64B !important;
+            border-radius: 50px;
         }
 
         h1 {
-            margin-top: 20px;
+            text-align: center;
+            font-size: 60px;
+            width: 100%;
             color: white;
         }
 
-        h4 {
-            margin: 10px;
+        h2 {
+            text-align: center;
+            font-size: 36px;
+            width: 100%;
             color: white;
         }
 
         @media screen and (max-width: 600px) {
-            .general {
+            body {
                 width: 100%;
             }
-        }
-
-        .buttons {
-            background-color: white;
-            color: #73A64B !important;
-            border-radius: 8px;
-            margin-top: 10%;
-            margin-bottom: 10%;
-            width: 200px;
-            height: 20%;
-            border: none;
-        }
-
-        .waste-button {
-            background-color: white;
-            color: #73A64B !important;
-            border-radius: 8px;
-            margin-bottom: 10%;
-            width: 200px;
-            height: 20%;
-            border: none;
         }
 
         .sidenav {
@@ -95,7 +98,7 @@
         }
 
         /* Style the sidenav links and the dropdown button */
-        .sidenav a, .dropdown-btn {
+        .sidenav a {
             padding: 6px 8px 6px 16px;
             text-decoration: none;
             font-size: 20px;
@@ -110,20 +113,8 @@
         }
 
         /* On mouse-over */
-        .sidenav a:hover, .dropdown-btn:hover {
+        .sidenav a:hover {
             color: #f1f1f1;
-        }
-
-        /* Main content */
-        .main {
-            margin-left: 200px; /* Same as the width of the sidenav */
-            font-size: 20px; /* Increased text to enable scrolling */
-            padding: 0px 10px;
-        }
-        .dropdown-container {
-            display: none;
-            background-color: #262626;
-            padding-left: 8px;
         }
 
         @media screen and (max-height: 450px) {
@@ -135,61 +126,51 @@
                 font-size: 18px;
             }
         }
+        p {
+            text-align: center;
+        }
     </style>
 </head>
 <body>
-    <div class="main">
-        <div class="sidenav">
-            <a href="landing.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="mapspage.html">E-Cycle Map</a>
-            <a href="ithelp.html">Basics of IT</a>
-            <a href="faqpage.html">FAQ</a>
-            <a href="ideas.html">DIY Projects</a>
-            <a href="addproject.html">Add Project</a>
-            <a href="findprojects.html">Search Project</a>
-            <a href="contact.html">Contact</a>
+<div class="main">
+    <div class="sidenav">
+        <a href="landing.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="map.html">E-Cycle Map</a>
+        <a href="mapspage.html">Places To Donate</a>
+        <a href="ithelp.html">Basics of IT</a>
+        <a href="faqpage.html">FAQ</a>
+        <a href="ideas.html">DIY Projects</a>
+        <a href="addproject.html">Add Project</a>
+        <a href="findprojects.html">Project Search</a>
+        <a href="contact.html">Contact</a>
 
     </div>
-    <script>
-        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-        var dropdown = document.getElementsByClassName("dropdown-btn");
-        var i;
 
-        for (i = 0; i < dropdown.length; i++) {
-            dropdown[i].addEventListener("click", function () {
-                this.classList.toggle("active");
-                var dropdownContent = this.nextElementSibling;
-                if (dropdownContent.style.display === "block") {
-                    dropdownContent.style.display = "none";
-                } else {
-                    dropdownContent.style.display = "block";
-                }
-            });
-        }
-    </script>
-<div id="header" class="header-banner">
-    <h1>About<br/></h1>
-    <h2>More about the team!</h2>
-</div>
-<div class="content">
-
-    <p>We are a group of 3 girls who did this project as a result
-        of the SoSpectra hackathon 2020.
-        We wanted to create a
-        website that helped bridge the gap
-        between tech scarcity,
-        tech illiteracy, and help
-        destroy e-waste dumping
-        FOR GOOD.
-        By helping others get access to
-        electronics and the net,
-        while also keeping ideas like
-        Net Neutrality alive,
-        we are combating a huge problem
-        that needs desperate,
-        long-needed attention.
-        ...And it’s only going to intensify.</p>
+    <div id="header" class="header-banner">
+        <h1>About<br/></h1>
+        <h2>More about the team!</h2>
+    </div>
+    <div class="content">
+        <p>We are a group of 3 girls who did this project as a result
+            of the SoSpectra hackathon 2020.
+            We wanted to create a
+            website that helped bridge the gap
+            between tech scarcity,
+            tech illiteracy, and help
+            destroy e-waste dumping
+            FOR GOOD.
+            By helping others get access to
+            electronics and the net,
+            while also keeping ideas like
+            Net Neutrality alive,
+            we are combating a huge problem
+            that needs desperate,
+            long-needed attention.
+            ...And it’s only going to intensify.
+        Questions? Feedback? You can find our contact information <a href="contact.html">here.</a>
+    </p>
+    </div>
 </div>
 </body>
 </html>

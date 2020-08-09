@@ -14,13 +14,16 @@
             padding: 5px;
         }
 
-        .header-banner {
+        /* .header-banner {
             width: 100%;
             height: 400px;
             margin-top: 10px;
             margin-bottom: 50px;
             text-align: center;
             background-image: url("land.jpg");
+        } */
+        .img {
+            text-align: center;
         }
 
         .ewaste {
@@ -95,7 +98,7 @@
         }
 
         /* Style the sidenav links and the dropdown button */
-        .sidenav a, .dropdown-btn {
+        .sidenav a {
             padding: 6px 8px 6px 16px;
             text-decoration: none;
             font-size: 20px;
@@ -110,7 +113,7 @@
         }
 
         /* On mouse-over */
-        .sidenav a:hover, .dropdown-btn:hover {
+        .sidenav a:hover {
             color: #f1f1f1;
         }
 
@@ -118,12 +121,7 @@
         .main {
             margin-left: 200px; /* Same as the width of the sidenav */
             font-size: 20px; /* Increased text to enable scrolling */
-            padding: 0px 10px;
-        }
-        .dropdown-container {
-            display: none;
-            background-color: #262626;
-            padding-left: 8px;
+            padding: 10px;
         }
 
         @media screen and (max-height: 450px) {
@@ -142,34 +140,17 @@
         <div class="sidenav">
             <a href="landing.html">Home</a>
             <a href="about.html">About</a>
-            <a href="mapspage.html">E-Cycle Map</a>
+            <a href="map.html">E-Cycle Map</a>
+            <a href="mapspage.html">Places To Donate</a>
             <a href="ithelp.html">Basics of IT</a>
             <a href="faqpage.html">FAQ</a>
             <a href="ideas.html">DIY Projects</a>
             <a href="addproject.html">Add Project</a>
-            <a href="findprojects.html">Search Project</a>
+            <a href="findprojects.html">Project Search</a>
             <a href="contact.html">Contact</a>
-
     </div>
-    <script>
-        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-        var dropdown = document.getElementsByClassName("dropdown-btn");
-        var i;
-
-        for (i = 0; i < dropdown.length; i++) {
-            dropdown[i].addEventListener("click", function () {
-                this.classList.toggle("active");
-                var dropdownContent = this.nextElementSibling;
-                if (dropdownContent.style.display === "block") {
-                    dropdownContent.style.display = "none";
-                } else {
-                    dropdownContent.style.display = "block";
-                }
-            });
-        }
-    </script>
-    <div id="header" class="header-banner">
-
+    <div class="img">
+        <img src="eco.png" alt="Ecotronics"/>
     </div>
     <div class="ewaste">
         <h1>The Reality of E-Waste</h1>

@@ -2,12 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!DOCTYPE html>
-<html>
-<head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon" />
+    <Title>Frequently Asked Questions</Title>
 <style>
 body {
   font-family: "Lato", sans-serif;
@@ -50,30 +48,12 @@ body {
 .main {
   margin-left: 200px; /* Same as the width of the sidenav */
   font-size: 20px; /* Increased text to enable scrolling */
-  padding: 0px 10px;
+  padding: 10px;
 }
 
 /* Add an active class to the active dropdown button */
-.active {
-  background-color: #C6DEBA;
-  color: white;
-}
 
 /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
-.dropdown-container {
-  display: none;
-  background-color: #262626;
-  padding-left: 8px;
-}
-
-/* Optional: Style the caret down icon */
-.fa-caret-down {
-  float: right;
-  padding-right: 8px;
-}
-    <title>IT Basics</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
         body {
             font-family: "Lato", sans-serif;
             color: black;
@@ -92,13 +72,11 @@ body {
         p {
             text-align: center;
             vertical-align: middle;
-            align: middle;
             font-size: 20px;
             width: 100%;
         }
         img {
             min-inline-size: 20px;
-            align: center;
             vertical-align: middle;
             padding: 50px 50px 45px 25px;
         }
@@ -121,75 +99,39 @@ body {
             color: black;
             font-size: 48px;
             text-align: left;
-            align: left;
-            vertical-align: left;
         }
+        h4 { text-align: center;}
         li {
             color: black;
-            font-size: 48px;
             text-align: left;
-            text-size: 25px;
-            align: left;
-            vertical-align: left;
-        }
-
-        .vertical-menu {
-            width: 300px;
-            padding: 10px;
-            float: left;
-            height: 100%;
-        }
-
-        .vertical-menu a {
-            background-color: #73A64B !important;
-            color: black;
-            display: block;
-            padding: 12px;
-            text-decoration: none;
-        }
-
-        .vertical-menu a:hover {
-            background-color: #C6DEBA !important;
+            font-size: 25px;
         }
 
         .content {
             padding: 20px;
         }
-
     </style>
+    <title></title>
 </head>
 <body>
     <div class="main">
         <div class="sidenav">
             <a href="landing.html">Home</a>
             <a href="about.html">About</a>
-            <a href="mapapage.html">E-Cycle Map</a>
+            <a href="map.html">E-Cycle Map</a>
+            <a href="mapspage.html">Places To Donate</a>
             <a href="ithelp.html">Basics of IT</a>
             <a href="faqpage.html">FAQ</a>
             <a href="ideas.html">DIY Projects</a>
             <a href="addproject.html">Add Project</a>
-            <a href="findprojects.html">Search Project</a>
+            <a href="findprojects.html">Project Search</a>
             <a href="contact.html">Contact</a>
-            <button class="dropdown-btn">Dropdown
-              <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-container">
-              <a href="#">Home</a>
-              <a href="about.html">About</a>
-              <a href="mapspage.html">Where 2 Donate</a>
-              <a href="ithelp.html">Basics of IT</a>
-              <a href="faqpage.html">FAQ</a>
-              <a href="#">DIY Projects</a>
-              <a href="addproject.html">Add Project</a>
-              <a href="findprojects.html">Search Project</a>
-              <a href="#">Contact</a>
             </div>
-    </div>
     <script>
     /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
     var dropdown = document.getElementsByClassName("dropdown-btn");
     var i;
-    
+
     for (i = 0; i < dropdown.length; i++) {
       dropdown[i].addEventListener("click", function() {
       this.classList.toggle("active");
@@ -214,7 +156,7 @@ body {
         <h4 class="typography-h4">Q: What's up with Tiktok? Facebook? Am I being tracked?</h4>
         <p class="typography-body">A: It’s really important to keep your data safe. We will teach you methods to maximize your opportunity
             to stay safe on the net.
-           While you can’t stay 100% private on social media, 
+           While you can’t stay 100% private on social media,
            taking initiative is the first step.
            2012/2014 - Instagram & WhatsApp acquired by Facebook
            2018 - Mark Zuckerberg, FB CEO, went on trial for privacy
@@ -224,48 +166,48 @@ body {
            a Chinese Corporation, bytedance. Businesses are required,
            by law, to report ALL data to the CCP.
            So, yes, you most certainly being tracked (US, China, Russia, or otherwise.)</p>
-    </div>    
+    </div>
     <div class="py-4">
         <h4 class="typography-h4">Q: Net Neutrality - What is it?</h4>
-        <p class="typography-body">A: It is a concept that ideas should be free and open on the net 
+        <p class="typography-body">A: It is a concept that ideas should be free and open on the net
             for collaboration. Knowledge is power, and we can’t do any of
             this alone. Initiatives such as SOPA and PIPA have come under fire
             for protecting corporations and big government in the United States.
             Examples of gatekeeping against net neutrality include GALE and JSTOR,
             two research journal libraries only available on University campuses.</p>
-    </div> 
+    </div>
             <div class="py-4">
         <h4 class="typography-h4">Q: What's Information Technology?</h4>
         <p class="typography-body">A: It is the study of how information is spread, retrieved, and stored; especially through technology.</p>
-    </div> 
+    </div>
             <div class="py-4">
         <h4 class="typography-h4">Q: What is the difference between CyberSecurity and IT?</h4>
-        <p class="typography-body">A: Both deal with similar concepts, only, CyberSecurity deals more with 
+        <p class="typography-body">A: Both deal with similar concepts, only, CyberSecurity deals more with
                 encryption and algorithms; IT is less specialized than CyberSec.</p>
-    </div> 
-        
+    </div>
+
             <div class="py-4">
         <h4 class="typography-h4">Q: xxx website got hacked! Should I change passwords?</h4>
         <p class="typography-body">A: First, yes; change your passwords. Secondly, it is recommended to change
                 them  every six months but no one really does that. Lastly, check if you were exposed, here: https://haveibeenpwned.com/</p>
-    </div> 
-        
+    </div>
+
     <div class="py-4">
         <h4 class="typography-h4">Q: Why should I care about this and basic IT Knowledge?</h4>
-        <p class="typography-body">A: We are coming to a point where pen-and-paper is going to 
+        <p class="typography-body">A: We are coming to a point where pen-and-paper is going to
             be yesterday’s data manager and main source of info.
             As a result, we are coming to a point where Tech illiteracy
-            and tech scarcity are going to be very big issues. 
+            and tech scarcity are going to be very big issues.
             So, take advantage of these sweet resources as
             much as you can!</p>
-    </div> 
+    </div>
     <div class="py-4">
         <h4 class="typography-h4">Q: Is the internet forever?</h4>
         <p class="typography-body">A: Technically, yes. With SEO's, web crawlers, hackers galore...
             Your information is basically stored for all to see. You might not become the next internet meme,
-            but rest assured that those embarrassing photos you put at 14 years old and those cringy vids you put are 
+            but rest assured that those embarrassing photos you put at 14 years old and those cringy vids you put are
             still indexed deep inside websites and archives.</p>
     </div>
-
+    </div>
 </body>
 </html>

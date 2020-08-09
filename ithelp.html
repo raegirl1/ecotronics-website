@@ -13,7 +13,7 @@
             background-color: #C6DEBA !important;
             padding: 5px;
         }
-
+        /* Banner for page */
         .header-banner {
             width: 100%;
             height: 300px;
@@ -99,13 +99,7 @@
         .main {
             margin-left: 200px; /* Same as the width of the sidenav */
             font-size: 20px; /* Increased text to enable scrolling */
-            padding: 0px 10px;
-        }
-
-        .dropdown-container {
-            display: none;
-            background-color: #262626;
-            padding-left: 8px;
+            padding: 10px;
         }
 
         @media screen and (max-height: 450px) {
@@ -122,20 +116,21 @@
 <body>
     <div class="main">
         <div class="sidenav">
-            <a href="home.html">Home</a>
+            <a href="landing.html">Home</a>
             <a href="about.html">About</a>
-            <a href="mapspage.html">E-Cycle Map</a>
+            <a href="map.html">E-Cycle Map</a>
+            <a href="mapspage.html">Places To Donate</a>
             <a href="ithelp.html">Basics of IT</a>
             <a href="faqpage.html">FAQ</a>
             <a href="ideas.html">DIY Projects</a>
             <a href="addproject.html">Add Project</a>
-            <a href="findprojects.html">Search Project</a>
+            <a href="findprojects.html">Project Search</a>
             <a href="contact.html">Contact</a>
     </div>
     <script>
         /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-        var dropdown = document.getElementsByClassName("dropdown-btn");
-        var i;
+        let dropdown = document.getElementsByClassName("dropdown-btn");
+        let i;
 
         for (i = 0; i < dropdown.length; i++) {
             dropdown[i].addEventListener("click", function () {

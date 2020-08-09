@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <Title>Find a Location!</Title>
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+/* Fixed sidenav, full height */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 10px;
+}
+
+.map {
+        height: 400px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+        text-align: center;
+        padding: 2rem;
+        vertical-align: bottom;
+       }
+
+/* Optional: Style the caret down icon */
+
+.header-banner {
+    width: 100%;
+    height: 300px;
+    padding: 10px;
+    background-color: #73A64B !important;
+    border-radius: 50px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 60px;
+    width: 100%;
+    color: white;
+}
+
+/*img*/
+img {
+    align-content: center;
+    vertical-align: bottom;
+    padding-top: 25px;
+
+}
+
+/* pp code */
+p {
+    align-content: center;
+    vertical-align: top;
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+<div class="main">
+    <div class="sidenav">
+        <a href="landing.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="map.html">E-Cycle Map</a>
+        <a href="mapspage.html">Places To Donate</a>
+        <a href="ithelp.html">Basics of IT</a>
+        <a href="faqpage.html">FAQ</a>
+        <a href="ideas.html">DIY Projects</a>
+        <a href="addproject.html">Add Project</a>
+        <a href="findprojects.html">Project Search</a>
+        <a href="contact.html">Contact</a>
+</div>
+    <div class="header-banner">
+        <h1>Map of eCycling Opportunities</h1>
+    </div>
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d221334.4314437907!2d-95.75744134100457!3d29.91181035173065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sronald%20mcdonald%20house%20charities!5e0!3m2!1sen!2sus!4v1596943489437!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+</div>
+</body>
+</html>
