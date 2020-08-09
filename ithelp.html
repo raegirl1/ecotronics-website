@@ -62,199 +62,312 @@
             padding: 20px;
         }
 
+        .sidenav {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+        /* Style the sidenav links and the dropdown button */
+        .sidenav a, .dropdown-btn {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #818181;
+            display: block;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+        }
+
+        /* On mouse-over */
+        .sidenav a:hover, .dropdown-btn:hover {
+            color: #f1f1f1;
+        }
+
+        /* Main content */
+        .main {
+            margin-left: 200px; /* Same as the width of the sidenav */
+            font-size: 20px; /* Increased text to enable scrolling */
+            padding: 0px 10px;
+        }
+
+        .dropdown-container {
+            display: none;
+            background-color: #262626;
+            padding-left: 8px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
     </style>
 </head>
 <body>
-<div id="header" class="header-banner">
-    <h1>IT Basics<br/></h1>
-    <h2>All of your IT-related questions, answered!</h2>
-</div>
-<div class="content">
-    <div class="vertical-menu">
-        <a href="#hardware">HARDWARE</a>
-        <a href="#software">SOFTWARE</a>
-        <a href="#cybersecurity">CYBERSECURITY</a>
-        <a href="#network-terms">NETWORKS</a>
-        <a href="#apply">REAL WORLD APPLICATIONS</a>
+<div class="main">
+    <div class="sidenav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#map">E-Cycle Map</a>
+        <a href="#basicsofit">Basics of IT</a>
+        <a href="#faq">FAQ</a>
+        <a href="#diy">DIY Projects</a>
+        <a href="#addproject">Add Project</a>
+        <a href="#searchproject">Search Project</a>
+        <a href="#contact">Contact</a>
+        <button class="dropdown-btn">Dropdown
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">E-Cycle Map</a>
+            <a href="#">Basics of IT</a>
+            <a href="faqpage.html">FAQ</a>
+            <a href="#">DIY Projects</a>
+            <a href="#">Add Project</a>
+            <a href="#">Search Project</a>
+            <a href="#">Contact</a>
+        </div>
     </div>
-    <p>Technology is an integral part of our lives, with many careers valuing extensive technology skill sets and
-        backgrounds,
-        but many people are not very literate when it comes to tech. Do you know what phishing is? Did you ever wonder
-        what a GUI was?
-        Do you know the difference between an OS and application programs? Have you even heard of a GUI? Listed below
-        is a crash course on computers and important terminology that you may encounter. </p>
-    <HARDWARE id="hardware"></HARDWARE>
-    <h3>HARDWARE: WHAT IS IT?</h3>
-    <p>Hardware is the physical components of your computer. This includes your input and output devices.
-        Some examples of input devices are listed below:</p>
-    <ul>
-        <li><b>Mouse</b></li>
-        <li><b>Keyboard</b></li>
-        <li><b>Microphone</b></li>
-        <li><b>Touchpad:</b> For laptops, it allows the user to move the cursor around.</li>
-        <li><b>Touchscreens: </b> Touch-sensitive screens, in which you can used your finger or a stylus. Your smart
-            phones and tablets are good examples of this.
-        </li>
-        <li><b>Webcam:</b> For video transmission over the Internet.</li>
-        <li><b>Scanner: </b>Scans documents and text and digitalizes them.</li>
-    </ul>
-    Some examples of output devices are listed below:
-    <ul>
-        <li><b>Screen/monitor</b></li>
-        <li><b>Speakers</b></li>
-        <li><b>Printers: </b> Can either be a laser (better for black and white/text) printer,
-            or an inkjet (better for colored documents/photos) printer.
-        </li>
-    </ul>
-    <h4>Types of Computers:</h4>
-    <ul>
-        <li><b>Mainframes: </b>Large computers that store large amounts of data. These are often used by large
-            companies, such as banks.
-        </li>
-        <li><b>Personal Computers: </b> Computers that are meant for individual use, and include desktops, laptops, and
-            tablet PCs.
-        </li>
-    </ul>
-    <h4>The Bigger Picture:</h4>
-    Have you ever wondered what goes on... inside of your computer? Below are some internal components of computers:
-    <ul>
-        <li><b>Processors: (CPU) </b> Known as the central processing unit, it processes instructions.</li>
-        <li><b>Ports: </b> This includes the USB (universal serial bus) which allows external devices
-            to connect to the computer.
-        </li>
-        <li><b>HDMI (High Definition Multimedia Interface): </b>Allows you to connect monitors and projectors.</li>
-    </ul>
-    <h4>How Is Data Stored?</h4>
-    <p>Computers store data as bits (1's or 0's) and is the smallest unit of information. Similarly, these bits make up
-        larger units of data: 8 bits make up one byte, and 1000 bytes make up a kilobyte. From there, we increase to
-        megabytes, gigabytes, and even terabytes of data.</p>
-    We can store data using some of these storage devices:
-    <ul>
-        <li><b>CD-ROM: </b> Our old friend, the compact disc. Burnt with a laser light, you can store music and some
-            data on here.
-        </li>
-        <li><b>USB flash drives and memory cards: </b>Are generally faster, have more capacity and are much more
-            portable.
-        </li>
-        <li><b>Hard disks: </b>Contains one or more magnetic disks; hard drives
-            can be installed into your PC/external devices.
-        </li>
-        <li><b>Online storage</b></li>
-        <li><b>Someday, holographic storage!: </b> Uses laser beams to store the data in three dimensions.</li>
-    </ul>
-    <h4>RAM vs. ROM</h4>
-    <p>Random access memory (RAM) is similar to that of short-term memory: when the electricity is gone, memory is lost.
-        A part of the operating system is loaded here. More RAM means that the computer does not have to refer to the
-        slower reading hard disk. Read only memory (ROM) is not deleted when there is not electricity, and can not be
-        written over. The Basic Input Output
-        System (BIOS) can also be found here, which helps the PC to become functional after being turned on, and starts
-        up the oeprating system.</p>
+    <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
 
-    <SOFTWARE id="software"></SOFTWARE>
-    <h3>SOFTWARE: WHAT IS IT?</h3>
-    <p>Any type of computer program is software. This includes the operating system (OS) and application software. </p>
-    <h4>What's Your Favorite OS?</h4>
-    <p>An operating system is a set of instructions, data, or programs which can be used to
-        operate your computer and allows you to perform specific tasks. It controls program execution and controls
-        access to the hardware. Some common operating systems are Windows, Linux, Android, and MacOS.</p>
-    <h4>"Oh, Like That Microsoft Office Thing!"</h4>
-    <p>Some common programs that you'll come across are:</p>
-    <ul>
-        <li><b>Word processing:</b> i.e. Microsoft Word
-        <li><b>Databases: </b>Contain and work with large amounts of data.</li>
-        <li><b>Presentation: </b> i.e. Microsoft PowerPoint, slideshows</li>
-        <li><b>E-mail programs:</b> i.e. Gmail, Windows Mail</li>
-        <li><b>Web browsers: </b> i.e. Google Chrome, Bing, Firefox, etc., what's your favorite browser?</li>
-        <li><b>Image editing programs: </b> i.e. Adobe Photoshop, GIMP</li>
-        <li><b>Computer games</b></li>
-    </ul>
-    These programs can also support people with disabilities, such as offering speech recognition and and screen
-    readers.
-    <h4>Gooey? No, GUI!</h4>
-    <p>A graphical user interface, or GUI, allows you to use software applications through the use of graphical elements
-        such as buttons, icons, and other visual elements.</p>
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
+    <div id="header" class="header-banner">
+        <h1>IT Basics<br/></h1>
+        <h2>All of your IT-related questions, answered!</h2>
+    </div>
+    <div class="content">
+        <div class="vertical-menu">
+            <a href="#hardware">HARDWARE</a>
+            <a href="#software">SOFTWARE</a>
+            <a href="#cybersecurity">CYBERSECURITY</a>
+            <a href="#network-terms">NETWORKS</a>
+            <a href="#apply">REAL WORLD APPLICATIONS</a>
+        </div>
+        <p>Technology is an integral part of our lives, with many careers valuing extensive technology skill sets and
+            backgrounds,
+            but many people are not very literate when it comes to tech. Do you know what phishing is? Did you ever
+            wonder
+            what a GUI was?
+            Do you know the difference between an OS and application programs? Have you even heard of a GUI? Listed
+            below
+            is a crash course on computers and important terminology that you may encounter. </p>
+        <HARDWARE id="hardware"></HARDWARE>
+        <h3>HARDWARE: WHAT IS IT?</h3>
+        <p>Hardware is the physical components of your computer. This includes your input and output devices.
+            Some examples of input devices are listed below:</p>
+        <ul>
+            <li><b>Mouse</b></li>
+            <li><b>Keyboard</b></li>
+            <li><b>Microphone</b></li>
+            <li><b>Touchpad:</b> For laptops, it allows the user to move the cursor around.</li>
+            <li><b>Touchscreens: </b> Touch-sensitive screens, in which you can used your finger or a stylus. Your smart
+                phones and tablets are good examples of this.
+            </li>
+            <li><b>Webcam:</b> For video transmission over the Internet.</li>
+            <li><b>Scanner: </b>Scans documents and text and digitalizes them.</li>
+        </ul>
+        Some examples of output devices are listed below:
+        <ul>
+            <li><b>Screen/monitor</b></li>
+            <li><b>Speakers</b></li>
+            <li><b>Printers: </b> Can either be a laser (better for black and white/text) printer,
+                or an inkjet (better for colored documents/photos) printer.
+            </li>
+        </ul>
+        <h4>Types of Computers:</h4>
+        <ul>
+            <li><b>Mainframes: </b>Large computers that store large amounts of data. These are often used by large
+                companies, such as banks.
+            </li>
+            <li><b>Personal Computers: </b> Computers that are meant for individual use, and include desktops, laptops,
+                and
+                tablet PCs.
+            </li>
+        </ul>
+        <h4>The Bigger Picture:</h4>
+        Have you ever wondered what goes on... inside of your computer? Below are some internal components of computers:
+        <ul>
+            <li><b>Processors: (CPU) </b> Known as the central processing unit, it processes instructions.</li>
+            <li><b>Ports: </b> This includes the USB (universal serial bus) which allows external devices
+                to connect to the computer.
+            </li>
+            <li><b>HDMI (High Definition Multimedia Interface): </b>Allows you to connect monitors and projectors.</li>
+        </ul>
+        <h4>How Is Data Stored?</h4>
+        <p>Computers store data as bits (1's or 0's) and is the smallest unit of information. Similarly, these bits make
+            up
+            larger units of data: 8 bits make up one byte, and 1000 bytes make up a kilobyte. From there, we increase to
+            megabytes, gigabytes, and even terabytes of data.</p>
+        We can store data using some of these storage devices:
+        <ul>
+            <li><b>CD-ROM: </b> Our old friend, the compact disc. Burnt with a laser light, you can store music and some
+                data on here.
+            </li>
+            <li><b>USB flash drives and memory cards: </b>Are generally faster, have more capacity and are much more
+                portable.
+            </li>
+            <li><b>Hard disks: </b>Contains one or more magnetic disks; hard drives
+                can be installed into your PC/external devices.
+            </li>
+            <li><b>Online storage</b></li>
+            <li><b>Someday, holographic storage!: </b> Uses laser beams to store the data in three dimensions.</li>
+        </ul>
+        <h4>RAM vs. ROM</h4>
+        <p>Random access memory (RAM) is similar to that of short-term memory: when the electricity is gone, memory is
+            lost.
+            A part of the operating system is loaded here. More RAM means that the computer does not have to refer to
+            the
+            slower reading hard disk. Read only memory (ROM) is not deleted when there is not electricity, and can not
+            be
+            written over. The Basic Input Output
+            System (BIOS) can also be found here, which helps the PC to become functional after being turned on, and
+            starts
+            up the oeprating system.</p>
 
-    <CYBERSECURITY id="cybersecurity"></CYBERSECURITY>
-    <h3>CYBERSECURITY</h3>
+        <SOFTWARE id="software"></SOFTWARE>
+        <h3>SOFTWARE: WHAT IS IT?</h3>
+        <p>Any type of computer program is software. This includes the operating system (OS) and application
+            software. </p>
+        <h4>What's Your Favorite OS?</h4>
+        <p>An operating system is a set of instructions, data, or programs which can be used to
+            operate your computer and allows you to perform specific tasks. It controls program execution and controls
+            access to the hardware. Some common operating systems are Windows, Linux, Android, and MacOS.</p>
+        <h4>"Oh, Like That Microsoft Office Thing!"</h4>
+        <p>Some common programs that you'll come across are:</p>
+        <ul>
+            <li><b>Word processing:</b> i.e. Microsoft Word
+            <li><b>Databases: </b>Contain and work with large amounts of data.</li>
+            <li><b>Presentation: </b> i.e. Microsoft PowerPoint, slideshows</li>
+            <li><b>E-mail programs:</b> i.e. Gmail, Windows Mail</li>
+            <li><b>Web browsers: </b> i.e. Google Chrome, Bing, Firefox, etc., what's your favorite browser?</li>
+            <li><b>Image editing programs: </b> i.e. Adobe Photoshop, GIMP</li>
+            <li><b>Computer games</b></li>
+        </ul>
+        These programs can also support people with disabilities, such as offering speech recognition and and screen
+        readers.
+        <h4>Gooey? No, GUI!</h4>
+        <p>A graphical user interface, or GUI, allows you to use software applications through the use of graphical
+            elements
+            such as buttons, icons, and other visual elements.</p>
 
-    The internet is an intergral part of our daily lives, and it’s important that as netizens we
-    do everything that we can to protect our data. Below are some basic tips and tricks on
-    how to protect yourself online; and what to do in the event that you encounter an attack.<br/>
+        <CYBERSECURITY id="cybersecurity"></CYBERSECURITY>
+        <h3>CYBERSECURITY</h3>
 
-    <h4>Malware: Don’t Click The Link!</h4>
-    <p>Malicious software that one can obtain by clicking on suspicious links and
-        installing harmful software. The software may have the capability to install other
-        harmful software, or ultimately make your system inoperable!</p>
+        The internet is an intergral part of our daily lives, and it’s important that as netizens we
+        do everything that we can to protect our data. Below are some basic tips and tricks on
+        how to protect yourself online; and what to do in the event that you encounter an attack.<br/>
 
-    <h4> Phishing: Too Good To Be True?</h4>
-    <p>Ever look into your emails only to find that you’ve suddenly won a million
-        dollars? Phishing involves a person or organization pretending to be a trusted source
-        only to trick people into giving them sensitive information, and is the leading cause
-        of cyber attacks across the globe.</p>
+        <h4>Malware: Don’t Click The Link!</h4>
+        <p>Malicious software that one can obtain by clicking on suspicious links and
+            installing harmful software. The software may have the capability to install other
+            harmful software, or ultimately make your system inoperable!</p>
 
-    <h4>Man-in-the-Middle: Who Are You, Really?</h4>
-    <p>The attacker will intercept your messages, and tamper with them. It is also known as an eavesdropping attack!
-        This can be combated by encrypting the data, and that companies also audit and monitor their employees'
-        activities.</p>
+        <h4> Phishing: Too Good To Be True?</h4>
+        <p>Ever look into your emails only to find that you’ve suddenly won a million
+            dollars? Phishing involves a person or organization pretending to be a trusted source
+            only to trick people into giving them sensitive information, and is the leading cause
+            of cyber attacks across the globe.</p>
 
-    <h4>DDoS: Very Obnoxious!</h4>
-    <p>This attack is conducted by bombarding a company's central server with simultaneous data requests. The time
-        frame of the attack can range, from a few minutes, to as long as a month. By executing this type of cyber
-        attack,
-        hackers can force their victims to send them money or information.</p>
+        <h4>Man-in-the-Middle: Who Are You, Really?</h4>
+        <p>The attacker will intercept your messages, and tamper with them. It is also known as an eavesdropping attack!
+            This can be combated by encrypting the data, and that companies also audit and monitor their employees'
+            activities.</p>
 
-    <h4>Tips and Tricks To Keep Yourself Safe!</h4>
-    <ul>
-        <li><b>Make your password something difficult:</b> We always hear stories about people who make their
-            passwords '123456' or 'password'. DON'T BE ONE OF THOSE PEOPLE! Complicated passwords make it harder for
-            hackers to access your data. Include special characters such as '@' for a's or '$' for s's.
-        </li>
-        <br/>
-        <li><b>If it looks fishy, don't click it!: Clicking on unknown or suspicious links may result in downloading
-            malicious files or software. Try to make sure that the website address starts
-            with "https" rather than "http." Avoid clicking on advertisements that offer you a free download to a game
-            or a
-            free device! (Besides, it's illegal!) Instead, support the creators, and purchase the content legally!</b>
-        </li>
-        <br/>
-        <li><b>Do not respond to suspicious emails:</b> We all get emails that congratulate us for winning a million
-            dollars, please submit your credit card information to receive it, or that they need a response
-            regarding the warranty on your car that you never had to begin with. Do not reply to an email unless
-            you know who exactly it is you are communicating with. Delete these types of emails right away.
-        </li>
-        <br/>
-        <li><b>Don't Forget to Log Out!: </b>When using public computers, never forget to log out. Closing the browser
-            <b>does not</b> mean that you were logged out of your account. Refrain from your browser remembering your
-            log in credentials as well.
-        </li>
-    </ul>
+        <h4>DDoS: Very Obnoxious!</h4>
+        <p>This attack is conducted by bombarding a company's central server with simultaneous data requests. The time
+            frame of the attack can range, from a few minutes, to as long as a month. By executing this type of cyber
+            attack,
+            hackers can force their victims to send them money or information.</p>
 
-    <NETWORKS id="network-terms"></NETWORKS>
-    <h3>USEFUL TERMS: NETWORKS</h3>
-    Below are some basic terms regarding networks:
-    <ul>
-        <li><b>Client: </b> A student computer. Multiple clients can connect to one server computer.</li>
-        <li><b>Server: </b> This computer provides services such as printing and web servers to the client.</li>
-        <li><b>Intranet: </b>A network only available within a company.</li>
-        <li><b>Extranet: </b> The ability to access a company's network via the internet.</li>
-        <li><b>Internet: </b> The largest computer network of them all. This network contains smaller networks that link
-            you to millions of computers. Some internet services include e-mail and the worldwide web.
-        </li>
-        <li><b>Local Area Network (LAN): </b> A smaller network ususally within a school or comapny.</li>
-        <li><b>Wide Area Network: </b> A larger network that connects distant computers (such as communicating with
-            others from different countries.)
-        </li>
-        <li><b>Wireless-Local Area Network: </b> Allows devices to connect and communicate wirelessly.</li>
-    </ul>
-    <REAL-WORLD-APPLICATIONS id="apply"></REAL-WORLD-APPLICATIONS>
-    <h3>REAL WORLD APPLICATIONS</h3>
-    <p>Technology can be found everywhere, from buying stuff from Amazon to Venmo-ing your friend.
-        The possibilities are endless! Some examples are: </p>
-    <ul>
-        <li><b>E-banking/Online banking</b></li>
-        <li><b>E-learning </b></li>
-        <li><b>E-commerce (online shopping)</b></li>
-    </ul>
+        <h4>Tips and Tricks To Keep Yourself Safe!</h4>
+        <ul>
+            <li><b>Make your password something difficult:</b> We always hear stories about people who make their
+                passwords '123456' or 'password'. DON'T BE ONE OF THOSE PEOPLE! Complicated passwords make it harder for
+                hackers to access your data. Include special characters such as '@' for a's or '$' for s's.
+            </li>
+            <br/>
+            <li><b>If it looks fishy, don't click it!: Clicking on unknown or suspicious links may result in downloading
+                malicious files or software. Try to make sure that the website address starts
+                with "https" rather than "http." Avoid clicking on advertisements that offer you a free download to a
+                game
+                or a
+                free device! (Besides, it's illegal!) Instead, support the creators, and purchase the content
+                legally!</b>
+            </li>
+            <br/>
+            <li><b>Do not respond to suspicious emails:</b> We all get emails that congratulate us for winning a million
+                dollars, please submit your credit card information to receive it, or that they need a response
+                regarding the warranty on your car that you never had to begin with. Do not reply to an email unless
+                you know who exactly it is you are communicating with. Delete these types of emails right away.
+            </li>
+            <br/>
+            <li><b>Don't Forget to Log Out!: </b>When using public computers, never forget to log out. Closing the
+                browser
+                <b>does not</b> mean that you were logged out of your account. Refrain from your browser remembering
+                your
+                log in credentials as well.
+            </li>
+        </ul>
+
+        <NETWORKS id="network-terms"></NETWORKS>
+        <h3>USEFUL TERMS: NETWORKS</h3>
+        Below are some basic terms regarding networks:
+        <ul>
+            <li><b>Client: </b> A student computer. Multiple clients can connect to one server computer.</li>
+            <li><b>Server: </b> This computer provides services such as printing and web servers to the client.</li>
+            <li><b>Intranet: </b>A network only available within a company.</li>
+            <li><b>Extranet: </b> The ability to access a company's network via the internet.</li>
+            <li><b>Internet: </b> The largest computer network of them all. This network contains smaller networks that
+                link
+                you to millions of computers. Some internet services include e-mail and the worldwide web.
+            </li>
+            <li><b>Local Area Network (LAN): </b> A smaller network ususally within a school or comapny.</li>
+            <li><b>Wide Area Network: </b> A larger network that connects distant computers (such as communicating with
+                others from different countries.)
+            </li>
+            <li><b>Wireless-Local Area Network: </b> Allows devices to connect and communicate wirelessly.</li>
+        </ul>
+        <REAL-WORLD-APPLICATIONS id="apply"></REAL-WORLD-APPLICATIONS>
+        <h3>REAL WORLD APPLICATIONS</h3>
+        <p>Technology can be found everywhere, from buying stuff from Amazon to Venmo-ing your friend.
+            The possibilities are endless! Some examples are: </p>
+        <ul>
+            <li><b>E-banking/Online banking</b></li>
+            <li><b>E-learning </b></li>
+            <li><b>E-commerce (online shopping)</b></li>
+        </ul>
+    </div>
 </div>
 </body>
 </html>

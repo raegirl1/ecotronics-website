@@ -16,7 +16,7 @@
         .header-banner {
             width: 100%;
             height: 400px;
-            margin-top: 50px;
+            margin-top: 10px;
             margin-bottom: 50px;
             text-align: center;
             background-image: url("land.jpg");
@@ -34,7 +34,7 @@
 
         .general {
             position: center;
-            width: 31%;
+            width: 30.5%;
             height: 300px;
             margin: 15px;
             float: left;
@@ -64,8 +64,8 @@
             background-color: white;
             color: #73A64B !important;
             border-radius: 8px;
-            margin-top: 20%;
-            margin-bottom: 20%;
+            margin-top: 10%;
+            margin-bottom: 10%;
             width: 200px;
             height: 20%;
             border: none;
@@ -75,46 +75,148 @@
             background-color: white;
             color: #73A64B !important;
             border-radius: 8px;
-            margin-top: 3%;
+            margin-bottom: 10%;
             width: 200px;
             height: 20%;
             border: none;
         }
 
+        .sidenav {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+        /* Style the sidenav links and the dropdown button */
+        .sidenav a, .dropdown-btn {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #818181;
+            display: block;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+        }
+
+        /* On mouse-over */
+        .sidenav a:hover, .dropdown-btn:hover {
+            color: #f1f1f1;
+        }
+
+        /* Main content */
+        .main {
+            margin-left: 200px; /* Same as the width of the sidenav */
+            font-size: 20px; /* Increased text to enable scrolling */
+            padding: 0px 10px;
+        }
+        .dropdown-container {
+            display: none;
+            background-color: #262626;
+            padding-left: 8px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
     </style>
 </head>
 <body>
-<div id="header" class="header-banner">
-
-</div>
-<div class="ewaste">
-    <h1>The Reality of E-Waste</h1>
-    <h4>E-waste is, and continues to be a problem in our world today as continued mishandling poses a threat to our environment.
-        Learn more from the The Global E-Waste Statistics Partnership site on E-Waste.
-    </h4>
-    <button class="waste-button" onclick="window.location.href='https://globalewaste.org/';">
-        LEARN MORE
-    </button>
-</div>
-<div class="general">
-    <h2>About Us</h2>
-<h4>Who and what is Ecotronics? Why e-waste? Learn a little bit about the creators, the project, and what we stand for.</h4>
-    <button class="buttons" onclick="window.location.href='/ecotronics-website/about.html';">
-        LET'S GO!
-    </button>
-</div>
-<div class="general">
-    <h2>Where To Donate</h2>
-    <h4>Got some old electronics lying around your house that you want to throw away? Consider donating it! Find a drop-off place near you!</h4>
-    <button class="buttons" onclick="window.location.href='/ecotronics-website/mapspage.html';">
-        FIND A LOCATION!
-    </button></div>
-<div class="general">
-    <h2>Recycling Ideas</h2>
-    <h4>Whether it’s for school, work, or just for fun, we have your back. Here are some creative ways to handle your e-waste!</h4>
-    <button class="buttons" onclick="window.location.href='/ecotronics-website/ideas.html';">
-        GIVE ME IDEAS!
-    </button>
+<div class="main">
+    <div class="sidenav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#map">E-Cycle Map</a>
+        <a href="#basicsofit">Basics of IT</a>
+        <a href="#faq">FAQ</a>
+        <a href="#diy">DIY Projects</a>
+        <a href="#addproject">Add Project</a>
+        <a href="#searchproject">Search Project</a>
+        <a href="#contact">Contact</a>
+        <button class="dropdown-btn">Dropdown
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">E-Cycle Map</a>
+            <a href="#">Basics of IT</a>
+            <a href="faqpage.html">FAQ</a>
+            <a href="#">DIY Projects</a>
+            <a href="#">Add Project</a>
+            <a href="#">Search Project</a>
+            <a href="#">Contact</a>
+        </div>
     </div>
+    <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
+    <div id="header" class="header-banner">
+
+    </div>
+    <div class="ewaste">
+        <h1>The Reality of E-Waste</h1>
+        <h4>E-waste is, and continues to be a problem in our world today as continued mishandling poses a threat to our
+            environment.
+            Learn more from the The Global E-Waste Statistics Partnership site on E-Waste.
+        </h4>
+        <button class="waste-button" onclick="window.location.href='https://globalewaste.org/';">
+            LEARN MORE
+        </button>
+    </div>
+    <div class="general">
+        <h2>About Us</h2>
+        <h4>Who and what is Ecotronics? Why e-waste? Learn a little bit about the creators, the project, and what we
+            stand for.</h4>
+        <button class="buttons" onclick="window.location.href='/ecotronics-website/about.html';">
+            LET'S GO!
+        </button>
+    </div>
+    <div class="general">
+        <h2>Where To Donate</h2>
+        <h4>Got some old electronics lying around your house that you want to throw away? Consider donating it! Find a
+            drop-off place near you!</h4>
+        <button class="buttons" onclick="window.location.href='/ecotronics-website/mapspage.html';">
+            FIND A LOCATION!
+        </button>
+    </div>
+    <div class="general">
+        <h2>Recycling Ideas</h2>
+        <h4>Whether it’s for school, work, or just for fun, we have your back. Here are some creative ways to handle
+            your e-waste!</h4>
+        <button class="buttons" onclick="window.location.href='/ecotronics-website/ideas.html';">
+            GIVE ME IDEAS!
+        </button>
+    </div>
+</div>
 </body>
 </html>
