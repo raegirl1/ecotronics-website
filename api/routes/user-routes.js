@@ -121,6 +121,64 @@ router.delete("/:id", (req, res, next) => {
       res.status(400).json({ "error": err });
     })
 });
-// TODO: log in
+
+// log in a user 
+router.post('/login', (req, res, next) => {
+  var input = req.body.user;
+  User.find({
+    $or: [
+      { username: input },
+      { email: input }
+    ]
+  })
+    .exec()
+    .then(user => {
+      if (user.length < 1) { //no user
+        console.log("401: Authentication failed");
+        return res.status(401).json({
+          message: "Auth failed. No user."
+        });
+      };
+      bcrypt.compare(req.body.password, user[0].password, (err, result) => {
+        if (err) {
+          console.log("401: Authentication failed");
+          return res.status(401).json({
+            message: "Auth failed. Error in Bcrypt comparison."
+          });
+        };
+        if (result) {
+          const token = jwt.sign(
+            {
+              username: user[0].username,
+              userId: user[0]._id
+            },
+            process.env.JWT_KEY,
+            {
+              expiresIn: "1h"
+            }
+          );
+          console.log("200: Authentication successful! Your token: " + token);
+          return res.status(200).json({
+            message: "Auth successful",
+            token: token
+          });
+        }
+        else {
+          console.log("401: Authentication failed. Password does not match.");
+          return res.status(401).json({
+            message: "Auth failed. Password does not match.",
+          });
+        }
+      })
+
+    })
+    .catch(err => {
+      console.log("400: " + err);
+      res.status(400).json({
+        error: err
+      })
+    });
+
+});
 
 module.exports = router;

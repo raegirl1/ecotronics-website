@@ -62,16 +62,36 @@ app.get("/", (req, res) => {
   res.status(200).json({ message: "hi!" });
 });
 
-app.get('/about', (req, res) => {
+app.get('/about.html', (req, res) => {
   res.sendFile("about.html", { root: __dirname });
 });
 
-app.get('/ithelp', (req, res) => {
+app.get('/ithelp.html', (req, res) => {
   res.sendFile("ithelp.html", { root: __dirname });
 });
 
-app.get('/faq', (req, res) => {
+app.get('/faqpage.html', (req, res) => {
   res.sendFile("faqpage.html", { root: __dirname });
+});
+
+app.get('/addproject.html', (req, res) => {
+  res.sendFile("addproject.html", { root: __dirname });
+});
+
+app.get('/ideas.html', (req, res) => {
+  res.sendFile("ideas.html", { root: __dirname });
+});
+
+app.get('/mapspage.html', (req, res) => {
+  res.sendFile("mapspage.html", { root: __dirname });
+});
+
+app.get('/findprojects.html', (req, res) => {
+  res.sendFile("findprojects.html", { root: __dirname });
+});
+
+app.get('/contact.html', (req, res) => {
+  res.sendFile("contact.html", { root: __dirname });
 });
 
 // port 
