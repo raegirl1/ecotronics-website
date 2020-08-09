@@ -3,9 +3,9 @@
 This is a project made during SoSpectra's 2020 hackathon contest. 
 
 ## The Team
-- 
--
--
+- Catherine De Mesa
+- Jessica Feng
+- Sophia Eliza Cruz
 
 ## The Issue:
 
