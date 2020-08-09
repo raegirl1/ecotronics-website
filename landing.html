@@ -15,13 +15,29 @@
 
         .header-banner {
             width: 100%;
-            height: 300px;
-            padding: 30px;
+            height: 400px;
             margin-top: 100px;
-            background-color: #73A64B !important;
-            border-radius: 50px;
+            margin-left: 0;
+            text-align: center;
+            background-image: url("land.jpg");
         }
 
+        .general {
+            width: 30.3%;
+            height: 600px;
+            margin: 20px;
+            float: left;
+            color: white;
+            text-align: center;
+            border-radius: 50px;
+            background-color: #73A64B !important;
+        }
+
+        @media screen and (max-width: 600px) {
+            .general {
+                width: 100%;
+            }
+        }
 
     </style>
 </head>
@@ -29,5 +45,12 @@
 <div id="header" class="header-banner">
 
 </div>
+<div class="general">
+    <h4>Frequently Asked Questions</h4></div>
+<div class="general">
+    <h4>Where To Donate</h4></div>
+<div class="general">
+    <h4>Recycling Ideas</h4></div>
+
 </body>
 </html>
